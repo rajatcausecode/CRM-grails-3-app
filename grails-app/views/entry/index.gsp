@@ -6,15 +6,14 @@
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
     <body>
-        <a href="#create-entry" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-            </ul>
+        <div class="jumbotron">
+            <div class="container">
+              <h1>HOLA!</h1>
+              <p>Hello guys this is a very simple app built on top of Groovy on Grails framework. Just create an entry with your details to get free super-powers!!</p>
+            </div>
         </div>
-        <div id="create-entry" class="content scaffold-create" role="main">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
+        <div id="create-entry" class="container content scaffold-create" role="main">
+            <!-- <h1 class="text-center"><g:message code="default.create.label" args="[entityName]" /></h1> -->
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -25,14 +24,20 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form action="save">
-                <fieldset class="form">
-                    <f:all bean="entry"/>
-                </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-                </fieldset>
-            </g:form>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <h3>Details Please</h3>
+                    <g:form action="save">
+                        <fieldset class="form">
+                            <f:all bean="entry"/>
+                        </fieldset>
+                        <fieldset class="buttons">
+                            <g:submitButton name="create" class="save btn btn-primary" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+                        </fieldset>
+                    </g:form>
+                </div>
+            </div>
         </div>
     </body>
 </html>
