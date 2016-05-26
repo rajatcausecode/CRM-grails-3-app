@@ -5,6 +5,8 @@ This is a simple `CRUD` app which uses the details related to a person store it 
 - `cd` into the repo.
 - then run `grails run-app`.
 - fire up the browser and open `http://localhost:8080/entry/index`.
+- username: `admin`
+- password: `secret`
 
 ## Technologies Used
 > Grails 3
